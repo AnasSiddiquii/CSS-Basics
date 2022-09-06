@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- icon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+<!-- linked fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fascinate&display=swap" rel="stylesheet">
+
+<!-- body -->
+    <title>CSS Basics</title>
+    <meta name="description" content="This page is all about CSS Basic tags">
+
+<!-- CSS -->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+    <style>
+
+     :root{
+     --primary-color: teal;
+     --button-color: blueviolet;
+     --text-color: white;
+     }
+
+     body{background-color: pink;}
+
+     header{background-color: orange;}
+
+     .header{background-color: lightblue;}
+
+     #header{
+             background-color: orangered;
+             height: 300px; width: 500px;
+             margin: 50px auto; padding: 50px;
+             color: greenyellow;
+             text-align: center;
+             box-shadow: 10px 20px 10px 5px gray inset, 10px 20px 10px 5px blue; /* 3rd-blur 4th-strech */
+             opacity: 0.7;
+            }
+
+     .text1{
+            width: 500px;
+            border: 5px solid red;
+            direction: ltr;
+            text-align: justify;
+            text-decoration: underline;
+            text-transform: capitalize;
+            line-height: 50px;
+            text-indent: 50px;
+            letter-spacing: 5px;
+            word-spacing: 10px;
+            /* white-space: pre; */
+            word-wrap: break-word;
+            font-size: 20px;
+            text-shadow: 5px 10px 5px red;
+            writing-mode:vertical-rl;
+          }
+
+     .text1 img:hover{
+            vertical-align: middle;
+            opacity: 0.7;
+            } 
+             
+     .text2{
+          font-size: 30px;
+          font-weight: bold;
+          font-style: italic;
+          font-variant: small-caps;
+          font-family: download, 'Dancing Script', cursive;
+          font-family: 'Dancing Script', cursive;
+          /* font-family: 'Fascinate, cursive; */
+         }
+
+/* downloaded font */
+@font-face
+     {
+      font-family: download;
+      src: url('fonts/AlexBrush-Regular.ttf');
+      }      
+
+     .text3{
+          border: 3px solid red;
+          overflow: auto;
+          font-size: 30px;
+          height: 300px;
+          width: 500px;
+          resize: both;
+          }
+
+     textarea{
+          resize: none;
+          } 
+
+/* table */
+     table{border: 1px solid black; border-collapse: separate; border-spacing: 15px 20px; margin: 50px; empty-cells: hide; width: 300px; table-layout: fixed;}
+     caption{border: 1px solid black;  padding:20px; caption-side: bottom;}
+     th{border: 1px solid black; height: 50px; padding:20px; text-align: right;}
+     td{border: 1px solid black; height: 40px; padding:20px;vertical-align: top;}
+
+/* lists */
+     .unordered{
+                list-style-image: url(image.png);  
+              }
+
+    .ordered{
+             list-style: upper-roman;
+             
+            }
+    
+    .section{
+            background-image: url("image.PNG");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            
+            border-style: dashed solid dotted double;
+            border-color: blue red purple orange;
+            border-width: 5px 10px 5px 10px;
+            border-radius: 5px 15px 0px 10px;
+            }
+
+/* links */
+    a{
+         text-decoration: none;
+         color: white; 
+         }
+
+    a:link{
+         text-decoration: none;
+         color: black; 
+         }
+
+    a:visited{
+         text-decoration: none;
+         color: red; 
+         }
+
+    a:hover{
+         text-decoration: none;
+         color: green; 
+         }
+
+    a:active{
+         text-decoration: none;
+         color: blue; 
+         }
+
+
+/* function    */
+    .function{
+             background-color: var(--primary-color);
+             width: calc(100% - 200px);
+             height: 100px;
+             }
+    .link{
+            background-color: var(--button-color);
+            padding: 30px;
+            margin: 20px;
+            text-decoration: none;
+            height: 30px;
+            width: 180px;
+          }
+
+/* box sizing */
+    .box1{
+          border: 5px solid red;
+          background-color: blueviolet;
+          width: 400px;
+          height: 200px;
+          padding: 50px;
+          box-sizing: border-box;
+        }
+
+    .box2
+         {
+          border: 5px solid red;
+          background-color: chocolate;
+          width: 400px;
+          height: 200px;
+          padding: 50px;
+          box-sizing: content-box;
+        }
+
+/* initial n inherit */
+      .green{color: green; border: 1px solid red; font-size: 30px;}
+      .blue{color: blue;}
+      /* .red{color: red;} */
+      .initial{color: initial;}
+      .inherit{color: inherit;}
+
+/* relative units :-
+      vh for viewport height 0 to 100%
+      vw for viewport width 0 to 100%
+      em for size of parent in multiple 
+      rem for size of html in multiple */
+
+/* object fit */
+      .i{
+        border: 1px solid red;
+        height: 400px;
+        width: 500px;
+        object-fit: contain;
+        object-position: right;
+      }
+
+/* pseudo class */
+
+li:first-child{
+             color: red;
+            }
+
+
+li:last-child{
+             color: red;
+            }
+
+            
+li:nth-child(3){
+             color: red;
+            }
+
+
+li:nth-child(even){
+             color: blue;
+            }
+  
+li:nth-last-child(2){
+             color: green;
+            }
+  
+.inp:focus{
+  border: 3px solid red;
+}
+
+/* pseudo element */
+
+.para::first-letter{
+                font-size: 30px;
+                color: red;
+              }
+
+.para::first-line{
+                color: blue;
+              }
+
+.head::before{
+            content: url(image2.png);
+          }
+
+
+.head::after{
+            content: " added after";
+          }
+
+::selection{color: red;
+background: yellow;}
+
+/* display */
+
+.display{
+  border: 1px solid red;
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+}
+
+#dis1{
+  visibility: hidden;
+}
+
+#dis2{
+  display: none;
+}
+
+/* position n layer */
+
+.parent{
+  border: 1px solid red;
+  padding: 20px;
+  width: 500px;
+  position: relative; /* (if not then body) */
+}
+
+.child1{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: inline-block;
+  z-index: 2}
+
+.child2{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  left:-50px;
+  z-index: 3;
+
+}
+
+.child3{  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: inline-block;
+  position: relative;
+  top: 100px;
+  left:-100px;
+  z-index: 1;
+}
+
+/* overflow n clear */
+.ul{
+  background-color: green;
+  overflow: hidden;
+  list-style-type: none;
+}
+.ul li{
+  color: wheat;
+  padding: 5px 10px;
+  float: left;
+  clear: both;
+}
+
+.boxx1{
+      background-color: red;
+      height: 200px;
+      width: 70%;
+      float: left;
+      }
+
+.boxx2{
+      background-color: green;
+      height: 150px;
+      width: 30%;
+      float: left;
+      }
+
+.boxx3{background-color: blue;
+       clear: both;
+      }
+
+/* transform */
+
+.wrapper{
+  padding: 20px;
+  margin: 20px;
+
+}
+
+.wrapper a{
+        text-decoration: none;
+        background-color: green;
+        padding: 10px 20px;
+        color: white;
+        
+      }
+
+.wrapper a:hover{transform: scale(.8, 1.2);
+                display: inline-block;}
+
+.wrapper a:hover{transform: rotate(20deg);
+                display: inline-block;
+                }
+
+.wrapper a:hover{transform: translate(50px,50px);
+                display: inline-block;
+                }
+
+.wrapper a:hover{transform: skew(20deg,10deg);
+                 transform-origin: 100% 100%; /* x n y axis */
+                 display: inline-block;
+                }
+
+.cover1{
+      border: 2px solid red;
+      height: 200px;
+      width: 200px;
+      margin: 20px;      
+      float: left;
+     }
+
+.content1{background-color: yellow;
+        height: 200px;
+        width: 200px;
+        transform: perspective(300px) translate3d(50px,50px,50px);
+        }
+
+.cover2{
+      border: 2px solid red;
+      height: 200px;
+      width: 200px;
+      margin: 20px;      
+      float: right;
+     }
+
+.content2{background-color: yellow;
+          height: 200px;
+          width: 200px;
+          transform: perspective(300px) rotate3d(50,50,50,20deg);
+        }
+
+/* transition */
+
+.box  {
+      background-color: red;
+      height: 100px;
+      width: 100px;
+      margin: 50px;
+      transition-property: all;
+      transition-duration: 2s;
+      transition-delay: 500ms;
+      transition-timing-function: ease-in-out;
+      }
+
+.box:hover{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+          }
+
+/* animation */
+
+@keyframes chgclr/*any name*/{
+/*from or 0*/ /*to or 100*/  0% {background-color: red;}
+                             25% {transform: perspective(300px) translate3d(50px,50px,50px);}
+                             50% {background-color: blue;}
+                             75% { transform: perspective(300px) rotate3d(50,50,50,50deg);}
+                             100% {background-color: green;}
+                             }
+
+
+.ani{     
+      border-radius: 20px;
+      border: 1px solid black;
+      background-color: red;
+      box-shadow: 15px 20px 10px;
+      height: 150px;
+      width: 150px;
+      margin: 100px;
+      animation-name: chgclr;
+      animation-duration: 10s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+    }
+
+.anime{     
+      border-radius: 20px;
+      border: 1px solid black;
+      background-color: red;
+      box-shadow: 15px 20px 10px;
+      height: 150px;
+      width: 150px;
+      margin: 100px;
+      animation-name: chgclr;
+      animation-duration: 10s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in-out;
+    }
+
+/* column */
+.col{column-count: 3;
+column-gap: 50px;
+/* column-rule-style: dotted;
+column-rule-width: 2px;
+column-rule-color: red; */
+column-rule: 3px solid black;
+column-width: 200px;}
+
+.colspan{column-span: all;}
+
+/* flexbox */
+
+.flex{
+      background-color: pink;
+      display: flex;
+      flex-direction: row;
+      flex-flow: row-reverse nowrap;
+     
+
+    }  
+
+.child{
+       background-color: orange;
+       margin: 20px;
+       padding: 20px;
+       width: 100px;
+       text-align: center;
+      }
+
+#onea{
+order: 2;
+flex-shrink: 3;
+}
+
+#twoa{
+order: 3;
+flex-shrink: 1;
+}
+
+#threea{
+order: 1px;
+flex-shrink: 5;
+}
+
+
+.flexx{
+      background-color: chocolate;
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      /* justify-content: space-between; */
+      height: 400px;
+      /* align-items: center;
+      justify-content: center;
+      align-content: center; */
+    }  
+
+.childd{
+       background-color: orange;
+       margin: 20px;
+       padding: 20px;
+       width: 100px;
+       text-align: center;
+      }
+
+#one{
+order: 2;
+flex-grow: 1;
+flex-basis: 300px;
+align-self: center;
+}
+
+#two{
+order: 1;
+flex-grow: 1;
+align-self: flex-start;
+}
+
+#three{
+order: 3;
+flex-grow: 1;
+align-self: flex-end;
+}
+
+/* grid */
+
+.grid{
+  height: 500px;
+  background-color: orange;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 200px 300px 100px;/*colunm ltr*/
+  /*grid-template-rows: 75px 30% auto;*/ /*row ttb*/
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+.items{
+  background-color: wheat;
+  border: 1px solid black;
+  padding: 20px;
+  font: 40px;
+  text-align: center;
+}
+
+#i1{
+  /* grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3; */
+  grid-area: 3/2/5/4;
+}
+
+.grid2{
+  /* height: 500px; */
+  background-color: plum;
+  padding: 20px;
+  display: grid;
+  /* grid-template-columns: 200px 300px 100px;/*colunm ltr*/
+  /*grid-template-rows: 75px 30% auto; /*row ttb*/
+  /* grid-column-gap: 30px; */
+  /* grid-row-gap: 20px; */
+  /* justify-content: space-evenly; */
+  /* align-content: space-evenly; */
+  grid-template-areas: 
+  'header header header header header header'
+  'menu main main main right right'
+  'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  
+}
+
+.itemsn{
+  background-color: wheat;
+  border: 1px solid black;
+  padding: 20px;
+  font: 40px;
+  text-align: center;
+}
+
+#a1{grid-area: header;}
+
+#a2{grid-area: menu;}
+
+#a3{grid-area: main;}
+
+#a4{grid-area: right;}
+
+#a5{grid-area: footer;}
+
+
+
+
+
+    </style>
+
+</head>
+
+<body style="background-color: skyblue">
+
+<!-- grid -->
+
+<div class="grid">
+  <div class="items" id="i1">1</div>
+  <div class="items" id="i2">2</div>
+  <div class="items" id="i3">3</div>
+  <div class="items" id="i4">4</div>
+  <div class="items" id="i5">5</div>
+  <div class="items" id="i6">6</div>
+  <div class="items" id="i7">7</div>
+  <div class="items" id="i8">8</div>
+  <div class="items" id="i9">9</div>
+</div>
+
+<br><br><br>
+
+<div class="grid2">
+  <div class="itemsn" id="a1">1</div>
+  <div class="itemsn" id="a2">2</div>
+  <div class="itemsn" id="a3">3</div>
+  <div class="itemsn" id="a4">4</div>
+  <div class="itemsn" id="a5">5</div>
+</div>
+
+<br><br><br>
+
+<!-- flexbox -->
+
+<div class="flex">
+  <div class="childd" id="onea">one</div>
+  <div class="childd" id="twoa">two</div>
+  <div class="childd" id="threea">three</div>
+  <div class="child">four</div>
+  <div class="child">five</div>
+  <div class="child">six</div>
+  <div class="child">seven</div>
+  <div class="child">eight</div>
+</div>
+
+<br><br><br>
+
+<div class="flexx">
+  <div class="childd" id="one">one</div>
+  <div class="childd" id="two">two</div>
+  <div class="childd" id="three">three</div>
+</div>
+
+
+
+<!-- column -->
+  <div class="col">
+    <h1 class="colspan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ratione adipisci ts at quia soluta corporis repellat eveniet iste error dolor aliquid! Facilis?</h1>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam veritatis quam expedita, facere eius quidem maxime ad est error, ducimus facilis debitis beatae! Adipisci quis natus cum temporibus ratione dolore nihil beatae quae quidem. Cumque ad reprehenderit nemo dolores, ea, labore perspiciatis et autem officia non quas dolorum praesentium cupiditate nostrum incidunt molestiae doloremque magnam facere ab natus illum esse necessitatibus totam vero? Vitae totam distinctio expedita, repellat sapiente iure enim, sed aliquid repellendus nobis eveniet voluptas cum. Odit veniam quos est id fugit, voluptate quo quas aspernatur dolorum velit lequi suscipit? Molestiae cupiditate tenetur sit iste dolore exercitationem numquam atque quasi deserunt, blanditiis aspernatur ad provident libero quo culpa veniam assumenda voluptates ratione doloremque in reprehenderit eligendi nam alias. Recusandae nemo alias doloribus commodi consectetur eligendi minus deleniti vitae laboriosam. Laudantium cum officia suscipit tempore consequatur illum odio esse possimus expedita, cumque, optio et. Iusto, illo veniam. Sequi facere non error pariatur, atque, quia fuga officiis doloremque doloribus molestias ad consequatur eos aperiam voluptatem id maxime esse omnis aspernatur ex placeat modi possimus. Explicabo reprehenderit esse hic rerum porro veritatis, impedit nisi officiade ipsam officia id et autem porro labore eligendi quas iste? Ducimus temporlestias ea aperiam soluta harum id dolores odio nostrum! Aut vitae optio aliquid recusandae libero error, quod provident iusto voluptas quidem harum aspernatur cum, quae culpa corrupti voluptatibus reprehenderit debitis delectus tempore pariatur animi illum at laboriosam ullam? Facere, hic nemo atque ea cum tempora optio vel vero ex, voluptate consectetur? Amet, eum. Enim, culpa quibusdam voluptas commodi similique, quae fuga rem modi, praesentium eligendi odit minima provident perspiciatis ipsam adipisci accusamus magnam sunt quo! Doloremque deserunt perferendis hic. Repudiandae?</p>
+</div>
+
+<!-- animation -->
+
+<div class="ani"></div>
+
+<div class="anime"></div>
+
+<!-- transition -->
+
+<div class="box"></div>
+<br><br><br><br><br>
+
+
+
+<!-- transform -->
+
+<div class="wrapper">
+  <a href="">click here</a>
+</div>
+
+<br><br><br><br><br>
+
+<div class="cover1">
+  <div class="content1"></div>
+</div>
+
+<div class="cover2">
+  <div class="content2"></div>
+</div>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+
+<!-- overflow n clear -->
+  <ul class="ul">
+    <li>home</li>
+    <li>about us</li>
+    <li>team</li>
+    <li>contact us</li>
+    <li>help</li>
+  </ul>
+
+<br><br><br><br><br>
+
+<div class="boxx1">box1</div>
+<div class="boxx2">box2</div>
+<div class="boxx3">box3</div>
+
+<br><br><br><hr>
+
+<!-- display -->
+
+<div class="display" id="dis1">
+    div1
+</div>
+
+<div class="display" id="dis2">
+  div2
+</div>
+
+<div class="display">
+  div3
+</div>
+<hr>
+
+<!-- position n layer -->
+
+<div class="parent">
+  <div class="child1"></div>
+  <div class="child2"></div>
+  <div class="child3"></div>
+</div>
+
+<br><br><br><br><br><hr>
+
+<!-- pseudo class -->
+<ul>
+  <li>list item1</li>
+  <li>list item2</li>
+  <li>list item3</li>
+  <li>list item4</li>
+  <li>list item5</li>
+</ul>
+
+<input type="text" class="inp">
+
+<!-- pseudo element -->
+
+<h1 class="head">heading</h1>
+<p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam temporibus ducimus ipsam rerum corrupti est blanditiis. Tempora sequi expedita odit, eaque laborum in ad. Aut dignissimos in maiores debitis dicta?</p>
+<hr>
+
+<!-- object fit -->
+<img src="image2.PNG" class="i">
+
+<!-- function -->
+  <div class="function"></div>
+  <br><hr>
+  <a href="www.google.com" class="link">google</a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><hr>
+
+<!-- box sizing -->
+   <div class="box1">fffffffffffffff</div>
+   <br><hr>
+   <div class="box2">ggggggggggggggg</div>
+   <br><hr>
+
+<!-- initial n inherit -->
+    <div class="green">green text<br>
+      <lable class="blue">link 1</lable><br>
+      <lable class="initial">link 2</lable><br>
+      <lable class="inherit">link 3</lable><br>
+   </div>
+
+<!-- text start -->
+
+<!-- heading -->
+      <header  class="header" id="header">
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <h6>H6</h6>
+      </header>
+      <hr>
+
+<!-- paragraph -->
+    <p class="text1">
+      Lorem Ipsum is simply dummy text of <img src="image.PNG"> the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+      software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <p class="text2">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+      software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    
+    <p class="text3">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+      software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+
+
+<!-- list start -->
+
+<ul class="unordered"><b>unordered</b>
+  <li>item1</li>
+  <li>item2</li>
+  <li>item3</li>
+  <li>item4</li>
+  <li>item5</li>
+</ul>
+
+<ol class="ordered"><b>ordered</b>
+  <li>item1</li>
+  <li>item2</li>
+  <li>item3</li>
+  <li>item4</li>
+  <li>item5</li>
+</ol>
+
+<!-- unorder list -->
+      <ul>
+
+        <li>apple</li>
+            <ul style="list-style-type: square">
+                <li>red</li>
+            </ul>
+
+        <li>banana</li>
+            <ul style="list-style-type: circle">
+                <li>yellow</li>
+            </ul>
+
+      <li>grapes</li>
+            <ul style="list-style-type: disc">
+                <li>green</li>
+            </ul>
+
+      </ul>
+      <hr>
+
+<!-- ordered list -->
+      <ol>
+        <li type="1">tomato</li>
+        <li type="a">tomato</li>
+        <li type="A">tomato</li>
+        <li type="i">tomato</li>
+        <li type="I">tomato</li>
+      </ol>
+      <hr>
+
+<!-- discription list -->
+        <dt>123</dt>
+          <dd>234</dd>
+        
+        <dt>345
+          <dd>456</dd>
+        </dt>
+        <hr>
+
+<!-- list end -->
+
+
+<!-- table start -->
+
+      <table>
+        <caption>TABLE</caption>
+        <tr>
+          <th>heading1</th>
+          <th>heading2</th>
+          <th>heading3</th>
+        </tr>
+        <tr>
+          <td>content1</td>
+          <td>content2</td>
+          <td>content3</td>
+        </tr>
+        <tr>
+          <td>content4</td>
+          <td>content5</td>
+          <td></td>
+        </tr>
+      </table>  
+
+      <table border="1">
+
+      <caption><b>Student</b></caption>
+      <thead>
+          <tr>
+            <th></th>
+            <th>Column1</th>
+            <th>Column2</th>
+            <th>Column3</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <th>Row1</th>
+            <td>data1</td>
+            <td>data2</td>
+            <td>data3</td>
+          </tr>
+
+          <tr>
+            <th>Row2</th>
+            <td>data4</td>
+            <td>
+              
+              <table border="1">
+              <tr>
+                <td>col1</td>
+                <td>col2</td>
+              </tr>
+
+              <tr>
+                <td>col3</td>
+                <td>col4</td>
+              
+              </tr>
+            </table>
+            
+            </td>
+            <td>data6</td>
+          </tr>
+
+          <tr>
+            <th>Row3</th>
+            <td>data7</td>
+            <td>data8</td>
+            <td>data9</td>
+          </tr>
+
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <th>Row4</th>
+            <td>data10</td>
+            <td>data11</td>
+            <td>data12</td>
+          </tr>
+        </tfoot>
+
+      </table> 
+      <hr>
+
+<!-- table end -->
+
+
+<!-- input start -->
+
+      <form action="/action.php">
+        
+        <label>First Name</label>
+        <input type="text" placeholder="Enter First Name" value="predefined" readonly disabled>
+        <br><br>
+
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter Last Name" size="50" minlength="10" maxlength="50">
+        <br><br>
+
+        <label>Number</label>
+        <input type="number" placeholder="Enter Number" min="0" max="100" value="0" step="5">
+        <br><br>
+        
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" required>
+        <br><br>
+        
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email ID">
+        <br><br>
+
+        <label>Website</label>
+        <input type="url" placeholder="Enter URl">
+        <br><br>
+
+        <label>Time</label>
+        <input type="time">
+        <br><br>
+
+        <label>Date</label>
+        <input type="date">
+        <br><br>
+
+        <label>Range</label>
+        <input type="range" min="10" max="100">100
+        <br><br>
+
+        <label>Color</label>
+        <input type="color">
+        <br><br>
+        
+        <label>Upload</label>
+        <input type="file" multiple>
+        <br><br>
+        <label>Reset</label>
+        <input type="reset">
+        
+        <label>Button</label>
+        <input type="submit">
+        <br><br>
+        
+        <label>Hidden</label>
+        <input type="hidden">
+        
+      </form>
+      <hr>
+
+      
+<!-- radio button -->
+      <h2>what is your age?</h2>
+
+      <label for="age1">
+
+        <input type="radio" name=age1 id="age1" value="01 to 20" checked> 01 to 20
+        </label>
+
+        <label for="age2">
+        <input type="radio" name=age1 id="age2" value="21 to 40" > 21 to 40
+        </label>
+
+        <br>
+
+        <label for="age3">
+        <input type="radio" name=age1 id="age3" value="41 to 60"> 41 to 60 
+        </label >
+
+        <label for="age4">
+        <input type="radio" name=age1 id="age4" value="61 to 80"> 61 to 80 
+        </label>
+        <hr>
+
+  
+<!-- checkbox -->
+        <h2>what is your age?</h2>
+
+        <label for="age5">
+
+          <input type="checkbox" name=age5 id="age5" value="01 to 20" checked> 01 to 20
+          </label>
+
+          <label for="age6">
+          <input type="checkbox" name=age6 id="age6" value="21 to 40" > 21 to 40
+          </label>
+
+          <br>
+
+          <label for="age7">
+          <input type="checkbox" name=age7 id="age7" value="41 to 60"> 41 to 60 
+          </label >
+
+          <label for="age8">
+          <input type="checkbox" name=age8 id="age8" value="61 to 80"> 61 to 80 
+          </label>
+          <hr>
+<!-- input end -->
+
+
+<!-- others -->
+      <form>
+
+      <select>
+
+        <optgroup label="Cities"> 
+          <option value="city">Lmp</option>
+          <option value="city" selected>Lko</option>
+          <option value="city">Kol</option>
+        </optgroup>
+
+        <optgroup label="States">
+          <option value="state">AP</option>
+          <option value="state" selected>UP</option>
+          <option value="state">MP</option>
+        </optgroup>
+
+      </select><br><br>
+        
+      <textarea name="feedback" id="101" rows="10" cols="30">
+        Feedback
+      </textarea><br><br>
+
+      <label>Button</label>
+      <input type="image" src="image.PNG"><br><br>
+
+      </form>
+
+      <form>
+
+      <fieldset>
+        <legend>Google</legend>
+
+        <label>Search</label>
+        <input type="text" list="fruit">
+
+        <datalist id="fruit">
+          <option value="apple">
+          <option value="mango">
+          <option value="orange">
+          <option value="grapes">
+          <option value="melon">
+        </datalist>
+        
+        <input type="Submit" value="Go">
+      </fieldset>
+
+      </form>
+      <hr>
+
+
+
+
+<!-- link start -->
+
+        <footer>
+<!-- link webpage -->
+           <a href="https://www.google.com/" target="blank">
+            <img src="image.PNG"
+            height="20px"alt="google">Google</a>
+           <hr>
+         
+<!-- link local page -->
+           <p class="link">
+           <a href="Link Page.html">link page click here</a>
+           </p>
+           <hr>
+
+<!-- Email -->
+           <p>contact us on:
+             <a href="mailto:scd8055@gmail.com?subject=hello">scd8055@gmail.com</a>
+           </p>
+           <hr>
+
+<!-- link image -->
+           <img
+               src = "image.PNG"
+               width="400" height = "200px"
+               alt="123" title="xyz">
+           <hr>
+               
+<!-- link audio -->
+           <audio controls alt="123">
+               <source src = "D:\Movies\Hollywood\Transformers\Bumblebee.mp3">
+           </audio>
+           <hr>
+
+<!-- link video -->
+           <video controls width="400" height = "200px" autoplay>
+               <source src = "D:\Movies\Hollywood\Transformers\Bumblebee.mp4">
+           </video>
+
+           <video controls width="400" height = "200px" alt="123" loop>
+            <source src = "D:\Movies\Hollywood\Transformers\Transformers 1.mp4">
+          </video>
+          <hr>
+
+<!-- iframe -->
+            <iframe width="400" height = "200px"
+            src="https://www.youtube.com/embed/eIrMbAQSU34"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="400" height = "200px"
+            src="https://www.youtube.com/embed/_uQrJ0TkZlc"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <hr>
+
+<!-- link pdf -->
+            <embed src="iSchool Report.pdf" width="300" height ="300px">
+
+            <iframe width="300" height = "300px"
+            src="iSchool Report.pdf">
+            </iframe>
+
+            <object data="iSchool Report.pdf" width="300" height ="300px"></object>
+        </footer>
+        <hr>
+
+<!-- list start-->
+
+<!-- image mapping -->
+      <img src="workplace.jpg" usemap="#image-map" size="50%">
+
+      <map name="image-map">
+          <area target="_blank" alt="headphone" title="Headphone" href="https://www.amazon.in/s?k=headphone&crid=KLUCLDY9KTH4&sprefix=headphone%2Caps%2C322&ref=nb_sb_noss_2" 
+          coords="49,228,140,308,186,269,243,265,269,170,217,50,154,24,84,38,27,90,12,160" shape="poly">
+
+          <area target="_blank" alt="smartphon" title="Smartphone" href="https://www.amazon.in/s?k=smartphone&crid=12VQ6WQJREZL0&sprefix=smartphon%2Caps%2C339&ref=nb_sb_noss_2"
+          coords="185,277,275,466" shape="rect">
+
+          <area target="_blank" alt="laptop" title="Laptop" href="https://www.amazon.in/s?k=laptop&crid=K8M69EKTJ97A&sprefix=laptop%2Caps%2C358&ref=nb_sb_noss_1" 
+          coords="310,18,743,16,710,220,710,472,340,474,337,217" shape="poly">
+          
+          <area target="_blank" alt="mouse" title="Mouse" href="https://www.amazon.in/s?k=mouse&crid=11B1PJOA5EGTG&sprefix=mouse%2Caps%2C269&ref=nb_sb_noss_1" 
+          coords="828,350,72" shape="circle">
+      </map>
+
+<!-- link end -->
+
+
+</body>
+</html>
